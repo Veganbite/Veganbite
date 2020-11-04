@@ -1,0 +1,38 @@
+.navbar-container {
+    width: 100%;
+    background-color: #F69740;
+    overflow: hidden;
+}
+
+.link-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link-list li {
+    list-style: none;
+    padding: 15px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.link:hover {
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    background-color: #ff000015;
+}
+
+
+.logo {
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 27px;
+    color: #000000;
+}
+

@@ -16,7 +16,7 @@ const CardItems =
   { 
     description: "Shuffle if the option is not ideal for you",
     cardImage: "",
-    
+    l
   }
 ];
 

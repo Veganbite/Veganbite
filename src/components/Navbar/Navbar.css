@@ -12,7 +12,6 @@
 
 .link-list li {
     list-style: none;
-    padding: 15px;
 }
 
 .link {
@@ -27,12 +26,3 @@
     border-top: 1px solid #ffffff;
     background-color: #ff000015;
 }
-
-
-.logo {
-    background-color: #ffffff;
-    text-decoration: none;
-    font-size: 27px;
-    color: #000000;
-}
-

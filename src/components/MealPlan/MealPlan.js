@@ -5,6 +5,7 @@ class MealPlan extends React.Component {
         return (
             <div>
                 <h1>Meal Plan</h1>
+                <p>card</p>
             </div>
         )
     }

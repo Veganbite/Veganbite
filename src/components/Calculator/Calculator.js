@@ -11,8 +11,6 @@ class Calculator extends React.Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    // console.log("name", name);
-    // console.log("value", value);
     this.setState({ [name]: value }, () => {
       this.caloricCalculator();
     });

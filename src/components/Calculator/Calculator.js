@@ -1,12 +1,29 @@
 import React from 'react'
 
 class Calculator extends React.Component {
+    state = {
+        age: "",
+        weight: null,
+        gender: "",
+        height: null
+    };
+
+    }
     render() {
         return (
             <div>
-                <h1>Calculator</h1>
+                <Card 
+                title="Weight"
+                name="weight"
+                />
+
+                <Card
+                title= "Height"
+                name="height"
+                />
+               
             </div>
-        )
+        );
     }
 }
 

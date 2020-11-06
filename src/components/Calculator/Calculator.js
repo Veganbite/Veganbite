@@ -8,6 +8,21 @@ class Calculator extends React.Component {
         height: null
     };
 
+    handleChange = (event) => {
+        const {name, value }
+        this.setState({ [name]: value }, () => {
+            this.caloricCalculator();
+        });
+    };
+
+    caloricCalculator = () => {
+        const {weight, height } = this.state;
+        if (weight && height) {
+            console.log(Number(weight) + Number(height));
+        }
+    };
+
+
     }
     render() {
         return (

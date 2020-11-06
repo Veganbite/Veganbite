@@ -1,13 +1,46 @@
-import React from 'react'
+import React from "react";
+import Card from "./Card";
 
 class Calculator extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Calculator</h1>
-            </div>
-        )
+  state = {
+    age: "",
+    weight: null,
+    gender: "",
+    height: null
+  };
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value }, () => {
+      this.caloricCalculator();
+    });
+  };
+
+  caloricCalculator = () => {
+    const { weight, height } = this.state;
+    if (weight && height) {
+      console.log(Number(weight) + Number(height));
     }
+  };
+
+  render() {
+    return (
+      <div>
+        <Card
+          title="Weight"
+          name="weight"
+          currentValue={this.state.weight}
+          handleChange={this.handleChange}
+        />
+        <Card
+          title="Height"
+          name="height"
+          currentValue={this.state.height}
+          handleChange={this.handleChange}
+        />
+      </div>
+    );
+  }
 }
 
-export default Calculator
+export default Calculator;

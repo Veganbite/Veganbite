@@ -3,5 +3,10 @@
 }
 
 .card-body {
+    height: 1px;
+    background: #F69740;
+}
+
+hr {
     background: #F69740;
 }

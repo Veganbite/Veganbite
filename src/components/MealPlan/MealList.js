@@ -25,6 +25,13 @@ class MealList extends React.Component{
 
         ]
     }
+
+    componentDidMount(){
+     this.fetchMeals();
+    }
+    fetchMeals= ()=>{"Loanding..."};
+
+
     render(){
         return (
             <div>

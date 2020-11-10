@@ -1,16 +1,10 @@
-import React from 'react';
-import CardList from "./CardList"
+import React from "react";
+import MealList from "./MealList"
 
-class MealPlan extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Meal Plan</h1>
-                <div><CardList /></div>
-                
-            </div>
-        )
-    }
+function MealPlan(){
+    return(
+        <MealList />
+    )
 }
 
-export default MealPlan
+export default MealPlan;

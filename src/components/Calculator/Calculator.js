@@ -3,7 +3,7 @@ import Card from "./Card";
 
 class Calculator extends React.Component {
   state = {
-    age: "",
+    age: null,
     weight: null,
     gender: "",
     height: null
@@ -17,9 +17,9 @@ class Calculator extends React.Component {
   };
 
   caloricCalculator = () => {
-    const { weight, height } = this.state;
+    const { weight, height, age } = this.state;
     if (weight && height) {
-      console.log(Number(weight) + Number(height));
+      console.log(Number(weight) + Number(height) + Number(age));
     }
   };
 
@@ -36,6 +36,12 @@ class Calculator extends React.Component {
           title="Height"
           name="height"
           currentValue={this.state.height}
+          handleChange={this.handleChange}
+        />
+        <Card
+          title="Age"
+          name="age"
+          currentValue={this.state.age}
           handleChange={this.handleChange}
         />
       </div>

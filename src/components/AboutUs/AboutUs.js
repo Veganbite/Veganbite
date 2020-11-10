@@ -18,19 +18,19 @@ const AboutUs = () => {
             </Jumbotron>
             <Container>
                 <Row>
-                    <Col className='mb-3'>
-                        <Card style={{ width: '18rem', border: 'none' }}>
+                    <Col className='mb-3 d-flex justify-content-center'>
+                        <Card style={{ width: '18rem', border: 'none', height: '325px' }}>
                             <img src={mission} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
                             <Card.Body className='card-body'>
                                 <Card.Title className='text-white'>Our Mission</Card.Title>
                                 <Card.Text className='text-justify text-white'>
-                                Veganbite mission: help as many people to enter the vegan world with tasty recipes. 
+                                Veganbite mission: help as many people to enter the vegan world with tasty recipes. We should get more text here. Will look nice. We'll figure something else out. I hope.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className='mb-3'>
-                        <Card style={{ width: '18rem', border: 'none' }}>
+                    <Col className='mb-3 d-flex justify-content-center'>
+                        <Card style={{ width: '18rem', border: 'none', height: '350px' }}>
                             <img src={premium} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
                             <Card.Body>
                                 <Card.Title className='text-white'>Go Premium</Card.Title>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                                 Everyone can try Veganbite app for free and get meal plans adapted to their body type needs and goals. With Veganbite Pro, you will have access to unlimited shuffles, more recipes and you can register to have easy access to your data. 
                                 </Card.Text>
                             </Card.Body>
-                                <Button variant="warning text-white">Go somewhere</Button>
+                                <Button variant="warning text-white">Get Veganbite Pro</Button>
                         </Card>
                     </Col>
                 </Row>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./MealPlan.css"
 
 function Meal(props){
     return(

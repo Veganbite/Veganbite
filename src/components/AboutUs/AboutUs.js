@@ -19,7 +19,7 @@ const AboutUs = () => {
             <Container>
                 <Row>
                     <Col className='mb-3 d-flex justify-content-center'>
-                        <Card style={{ width: '18rem', border: 'none', height: '325px' }}>
+                        <Card style={{ width: '18rem', border: 'none', height: '313px' }}>
                             <img src={mission} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
                             <Card.Body className='card-body'>
                                 <Card.Title className='text-white'>Our Mission</Card.Title>

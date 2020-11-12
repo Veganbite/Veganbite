@@ -1,6 +1,13 @@
 import React from "react";
-import Meal from "./Meal";
+//import Meal from "./Meal";
 import axios from "axios";
+
+const YOUR_APP_ID = '60645151';
+const YOUR_APP_KEY = '755275472391afd460251ecf421222b1';
+let minRangeBreakfast = 'caloricIntake * 0.2 - 250';
+let maxRangeBreakfast = 'caloricIntake * 0.2 + 250';
+let minRangeLunch = 'caloricIntake * 0.5 - 250';
+let maxRangeLunch = 'caloricIntake * 0.5 + 250';
 
 class MealList extends React.Component{
   state={
@@ -27,26 +34,26 @@ class MealList extends React.Component{
         breakfast: []
   }
 
-  componentDidMount(){
-   this.fetchMeals();
-  }
+//   componentDidMount(){
+//    this.fetchBreakfast();
+//   }
 
-  fetchBreakfast= ()=>{
-      axios
-        .get(`https://rickandmortyapi.com/api/character/1`)
-        .then((response)=> this.setState({meals: [response.data]}))
-  };
+//   fetchBreakfast = () =>{
+//       axios
+//         .get(`https://api.edamam.com/search?q=oats&mealType=breakfast&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=80&calories=${minRange}-${maxRange}&health=vegan`)
+//         .then((response) => console.log(response))
+//   };
 
-  fetch= ()=>{
-    axios
-      .get(`https://rickandmortyapi.com/api/character/1`)
-      .then((response)=> this.setState({meals: [response.data]}))
-};
+//   fetchMainDishes = () =>{
+//     axios
+//       .get(`https://rickandmortyapi.com/api/character/1`)
+//       .then((response)=> this.setState({meals: [response.data]}))
+// };
 
   render(){
       return (
           <div>
-              {this.state.meals.map(item =>(
+              {/* {this.state.meals.map(item =>(
                   <Meal
                   key={item.id}
                   meal={item.name}
@@ -54,7 +61,7 @@ class MealList extends React.Component{
                   calories={item.status}
                   recipe={item.created}
                   />
-              ))}
+              ))} */}
               {/* {this.state.breakfast.map(item =>(
                   <Meal
                   key={item.id}

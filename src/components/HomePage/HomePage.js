@@ -1,14 +1,16 @@
-import React from 'react'
-import Header from "./Header"
-import HowItWorks from "./HowItWorks"
+import React from "react";
+import Header from "./Header/Header";
+import HowItWorksCards from "./HowItWorks/HowItWorksCards";
+import HowItWorksButton from "./HowItWorks/HowItWorksButton";
 
-const HomePage = () => {
-    return (
-        <div>
-            <Header />
-            <HowItWorks />
-        </div>
-    )
-}
+const Homepage = () => {
+  return (
+    <div>
+      <Header />
+      <HowItWorksCards />
+      <HowItWorksButton />
+    </div>
+  );
+};
 
-export default HomePage
+export default Homepage;

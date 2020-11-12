@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MealPlan = () => {
+const BreakCard = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const MealPlan = () => {
     )
 }
 
-export default MealPlan
+export default BreakCard

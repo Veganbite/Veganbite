@@ -5,12 +5,12 @@ class Meal extends React.Component {
 render(){
   return(
     <div className="MealCard">
-      <img src={this.props.image} alt=""></img>
+      <img src={this.props.image} alt={this.props.meal}></img>
       <div className="right">
-          <div className="tipe"><h1>{this.props.tipe}</h1></div>
-          <h2>{this.props.title}</h2>
+          <div className="type"><h1>{this.props.calories}</h1></div>
+          <h2>{this.props.recipe}</h2>
           <div className="buttons">
-            <button className="OrangeButton">{this.props.calories}</button>
+            <button className="OrangeButton">{this.props.key}</button>
             <button>Recipe</button>
             <button>Ingredients</button> 
           </div>

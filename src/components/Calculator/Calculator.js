@@ -127,7 +127,7 @@ class Calculator extends React.Component {
         default:
           finalCaloricIntake = normalCaloricIntake * 0;
           break;
-      } console.log(finalCaloricIntake);
+      } this.setState({caloricIntake: finalCaloricIntake});
   };
   }
   render() {

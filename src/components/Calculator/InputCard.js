@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card (props) {
+function InputCard (props) {
     return (
         <div>
             <h1>{props.title}</h1>
@@ -13,4 +13,4 @@ function Card (props) {
     );
 }
 
-export default Card
+export default InputCard

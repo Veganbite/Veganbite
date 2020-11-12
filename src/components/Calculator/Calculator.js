@@ -1,11 +1,12 @@
 import React from "react";
-import Card from "./Card";
+import InputCard from "./InputCard";
+import GenderCard from './GenderCard';
 
 class Calculator extends React.Component {
   state = {
     age: null,
     weight: null,
-    gender: "",
+    gender: '',
     height: null
   };
 
@@ -16,29 +17,47 @@ class Calculator extends React.Component {
     });
   };
 
+  isMan = () => {
+    this.setState({ gender: 'male' }, () => {
+      this.caloricCalculator();
+    });
+  }
+
+  isWoman = () => {
+    this.setState({ gender: 'female' }, () => {
+      this.caloricCalculator();
+    })
+  }
+
   caloricCalculator = () => {
-    const { weight, height, age } = this.state;
-    if (weight && height) {
-      console.log(Number(weight) + Number(height) + Number(age));
+    const { weight, height, age, gender } = this.state;
+    if (weight && height && age && gender) {
+      console.log(Number(weight) + Number(height) + Number(age) + gender);
     }
   };
 
   render() {
     return (
       <div>
-        <Card
+        <GenderCard
+        title="Gender"
+        isMan={this.isMan}
+        isWoman={this.isWoman}
+        currentValue={this.state.gender}
+        />
+        <InputCard
           title="Weight"
           name="weight"
           currentValue={this.state.weight}
           handleChange={this.handleChange}
         />
-        <Card
+        <InputCard
           title="Height"
           name="height"
           currentValue={this.state.height}
           handleChange={this.handleChange}
         />
-        <Card
+        <InputCard
           title="Age"
           name="age"
           currentValue={this.state.age}

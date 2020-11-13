@@ -1,5 +1,5 @@
 import React from "react";
-//import Meal from "./Meal";
+import Meal from "./Meal";
 import axios from "axios";
 
 const YOUR_APP_ID = '60645151';
@@ -44,16 +44,16 @@ class MealList extends React.Component{
 //         .then((response) => console.log(response))
 //   };
 
-//   fetchMainDishes = () =>{
-//     axios
-//       .get(`https://rickandmortyapi.com/api/character/1`)
-//       .then((response)=> this.setState({meals: [response.data]}))
-// };
+  fetchMainDishes = () =>{
+    axios
+      .get(`https://rickandmortyapi.com/api/character/1`)
+      .then((response)=> this.setState({meals: [response.data]}))
+};
 
   render(){
       return (
           <div>
-              {/* {this.state.meals.map(item =>(
+              {this.state.meals.map(item =>(
                   <Meal
                   key={item.id}
                   meal={item.name}
@@ -61,7 +61,7 @@ class MealList extends React.Component{
                   calories={item.status}
                   recipe={item.created}
                   />
-              ))} */}
+              ))}
               {/* {this.state.breakfast.map(item =>(
                   <Meal
                   key={item.id}

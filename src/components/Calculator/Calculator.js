@@ -12,90 +12,62 @@ class Calculator extends React.Component {
     height: null,
     goals: '',
     physicalActivity: '',
-    caloricIntake: ''
+    caloricIntake: '',
   };
 
   handleChange = (event) => {
     const { name, value } = event.target;
+    console.log('name', name)
+    console.log('value', value)
     this.setState({ [name]: value }, () => {
       this.caloricCalculator();
     });
   };
 
-  isMan = () => {
-    this.setState({ gender: 'male' }, () => {
-      this.caloricCalculator();
-    });
-  }
 
-  isWoman = () => {
-    this.setState({ gender: 'female' }, () => {
-      this.caloricCalculator();
-    })
-  }
 
-  sedentary = () => {
-    this.setState({ physicalActivity: 'sedentary'}, () => {
-      this.caloricCalculator();
-    })
-  }
 
-  light = () => {
-    this.setState({ physicalActivity: 'light'}, () => {
-      this.caloricCalculator();
-    })
-  }
-  moderate = () => {
-    this.setState({ physicalActivity: 'moderate'}, () => {
-      this.caloricCalculator();
-    })
-  }
+  // loseWeight = () => {
+  //   this.setState({ goals:'lose'}, () => {
+  //     this.caloricCalculator();
+  //   })
+  // }
 
-  vigorous = () => {
-    this.setState({ physicalActivity: 'vigorous'}, () => {
-      this.caloricCalculator();
-    })
-  }
+  // maintainWeight = () => {
+  //   this.setState({ goals:'maintain'}, () => {
+  //     this.caloricCalculator();
+  //   })
+  // }
 
-  loseWeight = () => {
-    this.setState({ goals:'lose'}, () => {
-      this.caloricCalculator();
-    })
-  }
+  // gainWeight = () => {
+  //   this.setState({ goals:'gain'}, () => {
+  //     this.caloricCalculator();
+  //   })
+  // }
 
-  maintainWeight = () => {
-    this.setState({ goals:'maintain'}, () => {
-      this.caloricCalculator();
-    })
-  }
-
-  gainWeight = () => {
-    this.setState({ goals:'gain'}, () => {
-      this.caloricCalculator();
-    })
-  }
-
-  caloricCalculator = () => {
+  calculateBasalCaloricIntake = (gender) => {
+    const { weight, height, age } = this.state;
     let basalCaloricIntake;
-    let normalCaloricIntake;
-    let finalCaloricIntake;
-    const { weight, height, age, gender, goals, physicalActivity } = this.state;
-    if (weight && height && age && gender && goals && physicalActivity) {
-      //console.log([Number(weight), Number(height), Number(age), gender, goals, physicalActivity]);
-      if(gender === 'male'){
-// Formula applied for man: (13.75 x weight) + (5 x height) - 6.76 x age) + 66.5
-        //console.log((13.75 * weight) + (5 * height) - (6.76 * age) + 66.5);
-        basalCaloricIntake = (13.75 * weight) + (5 * height) - (6.76 * age) + 66.5;
-      } else if(gender === 'female'){
-// Formula applied for woman: (9.56 x weight) + (1.85 x height) - (4.68 x age) + 665
-        // console.log((9.56 * weight) + (1.85 * height) - (4.68 * age) + 665)
-        basalCaloricIntake = (9.56 * weight) + (1.85 * height) - (4.68 * age) + 665;
-      }
-      // Daily Activity:
+    //console.log([Number(weight), Number(height), Number(age), gender, goals, physicalActivity]);
+    if(gender === 'male'){
+  // Formula applied for man: (13.75 x weight) + (5 x height) - 6.76 x age) + 66.5
+      //console.log((13.75 * weight) + (5 * height) - (6.76 * age) + 66.5);
+      basalCaloricIntake = (13.75 * weight) + (5 * height) - (6.76 * age) + 66.5;
+    } else if(gender === 'female'){
+  // Formula applied for woman: (9.56 x weight) + (1.85 x height) - (4.68 x age) + 665
+      // console.log((9.56 * weight) + (1.85 * height) - (4.68 * age) + 665)
+      basalCaloricIntake = (9.56 * weight) + (1.85 * height) - (4.68 * age) + 665;
+    }
+    return basalCaloricIntake
+  }
+
+  physicalActivityCalculator = (basalCaloricIntake, physicalActivity) => {
+     // Daily Activity:
       //   Sedentary: Gasto energético basal x 1.2
       //   Light:  Gasto energético basal x 1.375
       //   Moderate:  Gasto energético basal x 1.55
       //   Vigorous:  Gasto energético basal x 1.725
+      let normalCaloricIntake;
       let sedentary = 1.2, light = 1.375, moderate = 1.55, vigorous = 1.725;
       switch(physicalActivity){
         case 'sedentary':
@@ -113,8 +85,14 @@ class Calculator extends React.Component {
         default:
           normalCaloricIntake = (basalCaloricIntake * 0);
           break;
-      } //console.log(normalCaloricIntake);
-      switch(goals){
+      }
+      return normalCaloricIntake;
+  }
+
+
+  calculateFinalCaloricIntake = (normalCaloricIntake, goals) => {
+    let finalCaloricIntake;
+    switch(goals){
         case 'lose':
           finalCaloricIntake = normalCaloricIntake - 300;
           break;
@@ -127,17 +105,26 @@ class Calculator extends React.Component {
         default:
           finalCaloricIntake = normalCaloricIntake * 0;
           break;
-      } this.setState({caloricIntake: finalCaloricIntake});
-  };
+      }
+      return finalCaloricIntake;
+  }
+
+  caloricCalculator = () => {
+    const { weight, height, age, gender } = this.state;
+    if (weight && height && age && gender && this.state.goals && this.state.physicalActivity) {
+      let basalCaloricIntake = this.calculateBasalCaloricIntake(gender)
+      let normalCaloricIntake = this.physicalActivityCalculator(basalCaloricIntake, this.state.physicalActivity)
+      let finalCaloricIntake = this.calculateFinalCaloricIntake(normalCaloricIntake, this.state.goals)
+      this.setState({caloricIntake: finalCaloricIntake.toFixed(0)});
+    };
   }
   render() {
     return (
       <div>
         <GenderCard
         title="Gender"
-        isMan={this.isMan}
-        isWoman={this.isWoman}
-        currentValue={this.state.gender}
+        handleChangeGender={this.handleChange}
+        currentGenderSelected={this.state.gender}
         />
         <InputCard
           title="Weight"
@@ -161,17 +148,16 @@ class Calculator extends React.Component {
           title='Physical Activity'
           name='physicalActivity'
           currentValue={this.state.physicalActivity}
-          sedentary={this.sedentary}
-          light={this.light}
-          moderate={this.moderate}
-          vigorous={this.vigorous} 
+          handleActivityLevel={this.handleChange} 
         />
         <GoalsCard
           title="Goals"
+          name='goals'
           currentValue={this.state.goals}
-          loseWeight={this.loseWeight}
-          maintainWeight={this.maintainWeight}
-          gainWeight={this.gainWeight}
+          handleGoals={this.handleChange}
+          // loseWeight={this.loseWeight}
+          // maintainWeight={this.maintainWeight}
+          // gainWeight={this.gainWeight}
         />
         <div>
           <br />

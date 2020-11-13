@@ -4,9 +4,9 @@ function GoalsCard (props) {
     return (
         <div>
             <h1>{props.title}</h1>
-            <button onClick={props.loseWeight} value={props.currentvalue}>Lose Weight</button>
-            <button onClick={props.maintainWeight} value={props.currentvalue}>Maintain</button>
-            <button onClick={props.gainWeight} value={props.currentvalue}>Gain Weight</button>
+            <button onClick={props.handleGoals} name='goals' value='lose'>Lose Weight</button>
+            <button onClick={props.handleGoals} name='goals' value='maintain'>Maintain</button>
+            <button onClick={props.handleGoals} name='goals' value='gain'>Gain Weight</button>
         </div>
     );
 }

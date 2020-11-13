@@ -25,8 +25,6 @@ class Calculator extends React.Component {
   };
 
 
-
-
   // loseWeight = () => {
   //   this.setState({ goals:'lose'}, () => {
   //     this.caloricCalculator();

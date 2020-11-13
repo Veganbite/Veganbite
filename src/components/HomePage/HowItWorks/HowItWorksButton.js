@@ -3,8 +3,8 @@ import React from "react";
 const HowItWorksButton = () => {
   return (
     <div>
-      <div className="btn">
-        <button className="button">
+      <div className="btnInes">
+        <button className="buttonInes">
           <span>
             <a href="/calculator">Let's Start!</a>
           </span>

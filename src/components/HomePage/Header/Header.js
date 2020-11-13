@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <div className="img-container">
         <div className="inner-container">
-          <h1>VEGAN DOESN'T MEAN BORING!</h1>
+          <h1 className='header-title'>VEGAN DOESN'T MEAN BORING!</h1>
         </div>
       </div>
 
@@ -17,8 +17,8 @@ const Header = () => {
         </p>
         <h3>100% cruelty-free!</h3>
       </div>
-      <div className="cards-title">
-        <h2>How it Works?</h2>
+      <div>
+        <h2 className="how-it-works-title">How it Works?</h2>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@
     height: 50px;
     padding-left: 5em;
   } */
-.button {
+.buttonInes {
   display: inline-block;
   background-color: #f69740;
   border: none;
@@ -47,16 +47,18 @@
   transition: all 0.5s;
   cursor: pointer;
   width: 100%;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 
-.button span {
+.buttonInes span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.buttonInes span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -65,15 +67,15 @@
   transition: 0.5s;
 }
 
-.button:hover span {
+.buttonInes:hover span {
   padding-right: 50px;
 }
 
-.button:hover span:after {
+.buttonInes:hover span:after {
   opacity: 1;
   right: 0;
 }
-.button a {
+.buttonInes a {
   text-decoration: none;
   color: #ffffff;
   font-size: 50px;
@@ -98,13 +100,13 @@
   .cards-description {
     font-size: 30px;
   }
-  .button a {
+  .buttonInes a {
     font-size: 40px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  h1 {
+  .header-title {
     font-size: 30px;
   }
   .cards-description {

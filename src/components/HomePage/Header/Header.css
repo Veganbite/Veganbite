@@ -28,7 +28,7 @@ body {
   color: #ffffff;
   background-color: rgba(170, 145, 98, 0.5);
 }
-h1 {
+.header-title {
   max-width: 50%;
   transform: translateY(-50%);
   top: 50%;
@@ -48,11 +48,11 @@ h3 {
   color: #413131;
 }
 
-.cards-title {
+.how-it-works-title {
   color: #ffffff;
   margin-top: 100px;
   margin-bottom: 10px;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   background-color: #f69740;
@@ -60,7 +60,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1100px) {
-  h1 {
+  .header-title {
     font-size: 80px;
   }
   .message {
@@ -76,7 +76,7 @@ h3 {
     height: 500px;
   }
 
-  h1 {
+  .header-title {
     font-size: 60px;
   }
   .message {
@@ -102,8 +102,8 @@ h3 {
    background-position: center;
    background-size: 800px
   } */
-  h1 {
-    font-size: 45px;
+  .header-title {
+    font-size: 30px;
   }
 
   .message {

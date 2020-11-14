@@ -4,7 +4,7 @@ import './InputCards.css';
 
 function InputCard (props) {
     return (
-        <Card className='mt-4' border='warning' style={{ width: '18rem', height: '200px' }}>
+        <Card className='mt-4' border='warning' style={{ width: '18rem', height: '12rem' }}>
             <Card.Body>
                 <Card.Title className='text-center'>
                     {props.title}

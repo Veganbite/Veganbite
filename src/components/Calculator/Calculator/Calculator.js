@@ -3,8 +3,7 @@ import InputCard from "../InputCards/InputCard";
 import GenderCard from '../GenderCard';
 import GoalsCard from "../GoalsCard/GoalsCard";
 import PhysicalAct from '../PhysicalAct';
-import { Container, Row, Col } from 'react-bootstrap';
-import './Calculator.css';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 class Calculator extends React.Component {
   state = {
@@ -124,14 +123,14 @@ class Calculator extends React.Component {
         <Row>
           <Col className='mb-3 d-flex justify-content-center'>
             <GenderCard
-              title="Gender"
+              title="What is your gender?"
               handleChangeGender={this.handleChange}
               currentGenderSelected={this.state.gender}
             />
           </Col>
           <Col className='mb-3 d-flex justify-content-center'>
             <InputCard
-              title="Age"
+              title="How old are you?"
               name="age"
               unit='years'
               currentValue={this.state.age}
@@ -142,7 +141,7 @@ class Calculator extends React.Component {
           <Row>
             <Col className='mb-3 d-flex justify-content-center'>
               <InputCard
-                title="Height"
+                title="Your height?"
                 name="height"
                 unit='cm'
                 currentValue={this.state.height}
@@ -151,7 +150,7 @@ class Calculator extends React.Component {
             </Col>
             <Col className='mb-3 d-flex justify-content-center'>
               <InputCard
-                title="Weight"
+                title="Your weight?"
                 name="weight"
                 unit='kg'
                 currentValue={this.state.weight}
@@ -162,7 +161,7 @@ class Calculator extends React.Component {
           <Row>
             <Col className='mb-3 d-flex justify-content-center'>
               <PhysicalAct
-                title='Physical Activity'
+                title='What is your daily activity level?'
                 name='physicalActivity'
                 currentValue={this.state.physicalActivity}
                 handleActivityLevel={this.handleChange} 
@@ -172,7 +171,7 @@ class Calculator extends React.Component {
           <Row>
             <Col className='mb-3 d-flex justify-content-center'>
               <GoalsCard
-                title="Goals"
+                title="What is your goal?"
                 name='goals'
                 currentValue={this.state.goals}
                 handleGoals={this.handleChange}
@@ -183,10 +182,15 @@ class Calculator extends React.Component {
             </Col>
           </Row>
           <Row>
-            <div>
-              <br />
-              <h2 className='caloricIntake'>Your Caloric Intake: {this.state.caloricIntake}</h2>
-            </div>
+            <Col className='d-flex justify-content-center'>
+              <Card border='warning' className='mb-4' style={{ width: '28rem', height: '6rem' }}>
+                <Card.Body className='d-flex justify-content-center align-items-center'>
+                  <Card.Title className='text-center'>
+                    Your Caloric Intake: {this.state.caloricIntake}
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
       </Container>
     );

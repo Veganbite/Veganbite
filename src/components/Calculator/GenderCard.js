@@ -4,9 +4,9 @@ import { Card, Button, Col } from 'react-bootstrap';
 function GenderCard (props) {
     return (
             <Card border='warning' className='mt-4'>
-                <Card.Body style={{ width: '18rem', height: '200px' }}>
+                <Card.Body style={{ width: '18rem', height: '12rem' }}>
                     <Card.Title className='text-center'>
-                        {props.title}
+                        <h6><strong>{props.title}</strong></h6>
                     </Card.Title>
                     <Col className='d-flex justify-content-center'>
                         <Button

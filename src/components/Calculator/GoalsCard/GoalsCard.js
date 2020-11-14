@@ -1,17 +1,16 @@
 import React from "react";
 import { Card, Button, Col } from 'react-bootstrap';
-import './GoalsCard.css'
 
 function GoalsCard (props) {
     return (
-            <Card className='mt-4' border='warning' style={{ width: '38rem', height: '200px' }}>
+            <Card className='mt-4' border='warning' style={{ width: '28rem', height: '12rem' }}>
                 <Card.Body>
                     <Card.Title className='text-center'>
                         {props.title}
                     </Card.Title>
-                    <Col className='d-flex justify-content-center battans'>
+                    <Col className='d-flex justify-content-center'>
                         <Button
-                            style={{ marginRight: '20px', marginTop: '25px' }}
+                            style={{marginTop: '25px' }}
                             variant="light"
                             onClick={props.handleGoals}
                             name='goals'
@@ -20,7 +19,7 @@ function GoalsCard (props) {
                             Lose Weight
                         </Button>
                         <Button
-                            style={{ marginRight: '20px', marginTop: '25px' }}
+                            style={{marginRight: '20px', marginLeft: '20px' ,marginTop: '25px' }}
                             variant="light"
                             onClick={props.handleGoals}
                             name='goals'
@@ -29,7 +28,7 @@ function GoalsCard (props) {
                             Maintain
                         </Button>
                         <Button
-                            style={{ marginRight: '20px', marginTop: '25px' }}
+                            style={{ marginTop: '25px' }}
                             variant="light"
                             onClick={props.handleGoals}
                             name='goals'

@@ -1,9 +1,12 @@
 import React from "react";
+import BFCard from "./BFCard";
 
 
 function MealPlan(){
     return(
-       <div>Hi Fuck Faces</div>
+       <div>
+           <BFCard />
+       </div>
     )
 }
 

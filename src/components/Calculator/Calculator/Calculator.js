@@ -3,6 +3,7 @@ import InputCard from "../InputCards/InputCard";
 import GenderCard from '../GenderCard';
 import GoalsCard from "../GoalsCard/GoalsCard";
 import PhysicalAct from '../PhysicalAct';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 class Calculator extends React.Component {
@@ -191,6 +192,18 @@ class Calculator extends React.Component {
                 </Card.Body>
               </Card>
             </Col>
+          </Row>
+          <Row className='d-flex justify-content-center mb-4'>
+            <button style={{ border: 'none',
+              padding: '17px',
+              backgroundColor: '#F69740',
+              borderRadius: '50%' }}>
+            <Link style={{ textDecoration: 'none',
+              color: 'white' }}
+              className='link' to="/meal-plan">
+              Meal<br/>Plan
+            </Link>
+            </button>
           </Row>
       </Container>
     );

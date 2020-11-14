@@ -21,7 +21,7 @@ const AboutUs = () => {
                     <Col className='mb-3 d-flex justify-content-center'>
                         <Card style={{ width: '18rem', border: 'none', height: '313px' }}>
                             <img src={mission} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
-                            <Card.Body className='card-body'>
+                            <Card.Body className='card-body-about-us'>
                                 <Card.Title className='text-white'>Our Mission</Card.Title>
                                 <Card.Text className='text-justify text-white'>
                                 Veganbite mission: help as many people to enter the vegan world with tasty recipes. We should get more text here. Will look nice. We'll figure something else out. I hope.
@@ -32,7 +32,7 @@ const AboutUs = () => {
                     <Col className='mb-3 d-flex justify-content-center'>
                         <Card style={{ width: '18rem', border: 'none', height: '350px' }}>
                             <img src={premium} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
-                            <Card.Body>
+                            <Card.Body className='card-body-about-us'>
                                 <Card.Title className='text-white'>Go Premium</Card.Title>
                                 <Card.Text className='text-justify text-white'>
                                 Everyone can try Veganbite app for free and get meal plans adapted to their body type needs and goals. With Veganbite Pro, you will have access to unlimited shuffles, more recipes and you can register to have easy access to your data. 

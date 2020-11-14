@@ -1,38 +1,53 @@
 import React from "react";
+import { Card, Button, Col } from 'react-bootstrap';
 
 function PhysicalAct (props) {
     return (
-        <div>
-            <h1>{props.title}</h1>
-            <button 
-                onClick={props.handleActivityLevel}
-                name="physicalActivity"
-                value="sedentary"
-            >
-                Sedentary
-            </button>
-            <button
-                onClick={props.handleActivityLevel}
-                name="physicalActivity"
-                value="light"
-            >
-                Light
-            </button>
-            <button 
-                onClick={props.handleActivityLevel}
-                name="physicalActivity"
-                value="moderate"
-            >
-                Moderate
-            </button>
-            <button 
-                onClick={props.handleActivityLevel}
-                name="physicalActivity"
-                value="vigorous"
-            >
-                Vigorous
-            </button>
-        </div>
+        <Card className='mt-4' border='warning' style={{ width: '38rem', height: '200px' }}>
+            <Card.Body>
+                <Card.Title className='text-center'>
+                    {props.title}
+                </Card.Title>
+                <Col className='d-flex justify-content-center'>
+                    <Button
+                        style={{ marginRight: '20px', marginTop: '25px' }}
+                        variant="light" 
+                        onClick={props.handleActivityLevel}
+                        name="physicalActivity"
+                        value="sedentary"
+                    >
+                        Sedentary
+                    </Button>
+                    <Button
+                        style={{ marginRight: '20px', marginLeft: '20px', marginTop: '25px' }}
+                        variant="light"
+                        onClick={props.handleActivityLevel}
+                        name="physicalActivity"
+                        value="light"
+                    >
+                        Light
+                    </Button>
+                    <Button
+                        style={{ marginRight: '20px', marginLeft: '20px', marginTop: '25px' }}
+                        variant="light" 
+                        onClick={props.handleActivityLevel}
+                        name="physicalActivity"
+                        value="moderate"
+                    >
+                        Moderate
+                    </Button>
+                    <Button
+                        style={{ marginLeft: '20px', marginTop: '25px' }}
+                        variant="light" 
+                        onClick={props.handleActivityLevel}
+                        name="physicalActivity"
+                        value="vigorous"
+                    >
+                        Vigorous
+                    </Button>
+                </Col>
+            </Card.Body>
+        </Card>
     );
 }
 

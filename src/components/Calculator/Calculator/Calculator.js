@@ -1,8 +1,10 @@
 import React from "react";
-import InputCard from "./InputCard";
-import GenderCard from './GenderCard';
-import GoalsCard from "./GoalsCard";
-import PhysicalAct from './PhysicalAct';
+import InputCard from "../InputCards/InputCard";
+import GenderCard from '../GenderCard';
+import GoalsCard from "../GoalsCard/GoalsCard";
+import PhysicalAct from '../PhysicalAct';
+import { Container, Row, Col } from 'react-bootstrap';
+import './Calculator.css';
 
 class Calculator extends React.Component {
   state = {
@@ -118,50 +120,75 @@ class Calculator extends React.Component {
   }
   render() {
     return (
-      <div>
-        <GenderCard
-        title="Gender"
-        handleChangeGender={this.handleChange}
-        currentGenderSelected={this.state.gender}
-        />
-        <InputCard
-          title="Weight"
-          name="weight"
-          currentValue={this.state.weight}
-          handleChange={this.handleChange}
-        />
-        <InputCard
-          title="Height"
-          name="height"
-          currentValue={this.state.height}
-          handleChange={this.handleChange}
-        />
-        <InputCard
-          title="Age"
-          name="age"
-          currentValue={this.state.age}
-          handleChange={this.handleChange}
-        />
-        <PhysicalAct
-          title='Physical Activity'
-          name='physicalActivity'
-          currentValue={this.state.physicalActivity}
-          handleActivityLevel={this.handleChange} 
-        />
-        <GoalsCard
-          title="Goals"
-          name='goals'
-          currentValue={this.state.goals}
-          handleGoals={this.handleChange}
-          // loseWeight={this.loseWeight}
-          // maintainWeight={this.maintainWeight}
-          // gainWeight={this.gainWeight}
-        />
-        <div>
-          <br />
-          <button onClick={this.caloricCalculator}>Display Your Caloric Intake: {this.state.caloricIntake}</button>
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col className='mb-3 d-flex justify-content-center'>
+            <GenderCard
+              title="Gender"
+              handleChangeGender={this.handleChange}
+              currentGenderSelected={this.state.gender}
+            />
+          </Col>
+          <Col className='mb-3 d-flex justify-content-center'>
+            <InputCard
+              title="Age"
+              name="age"
+              unit='years'
+              currentValue={this.state.age}
+              handleChange={this.handleChange}
+              />
+          </Col>
+          </Row>
+          <Row>
+            <Col className='mb-3 d-flex justify-content-center'>
+              <InputCard
+                title="Height"
+                name="height"
+                unit='cm'
+                currentValue={this.state.height}
+                handleChange={this.handleChange}
+              />
+            </Col>
+            <Col className='mb-3 d-flex justify-content-center'>
+              <InputCard
+                title="Weight"
+                name="weight"
+                unit='kg'
+                currentValue={this.state.weight}
+                handleChange={this.handleChange}
+                />
+            </Col>
+          </Row>
+          <Row>
+            <Col className='mb-3 d-flex justify-content-center'>
+              <PhysicalAct
+                title='Physical Activity'
+                name='physicalActivity'
+                currentValue={this.state.physicalActivity}
+                handleActivityLevel={this.handleChange} 
+                />
+            </Col>
+          </Row>
+          <Row>
+            <Col className='mb-3 d-flex justify-content-center'>
+              <GoalsCard
+                title="Goals"
+                name='goals'
+                currentValue={this.state.goals}
+                handleGoals={this.handleChange}
+                // loseWeight={this.loseWeight}
+                // maintainWeight={this.maintainWeight}
+                // gainWeight={this.gainWeight}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <div>
+              <br />
+              <h2 className='caloricIntake'>Your Caloric Intake: {this.state.caloricIntake}</h2>
+            </div>
+          </Row>
+      </Container>
     );
   }
 }

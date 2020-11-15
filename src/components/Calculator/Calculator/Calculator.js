@@ -19,8 +19,8 @@ class Calculator extends React.Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    console.log('name', name)
-    console.log('value', value)
+    // console.log('name', name)
+    // console.log('value', value)
     this.setState({ [name]: value }, () => {
       this.caloricCalculator();
     });
@@ -187,7 +187,7 @@ class Calculator extends React.Component {
               <Card border='warning' className='mb-4' style={{ width: '28rem', height: '6rem' }}>
                 <Card.Body className='d-flex justify-content-center align-items-center'>
                   <Card.Title className='text-center'>
-                    Your Caloric Intake: {this.state.caloricIntake}
+                    Your Caloric Intake: <u>{this.state.caloricIntake}</u>
                   </Card.Title>
                 </Card.Body>
               </Card>

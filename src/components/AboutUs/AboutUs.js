@@ -20,7 +20,7 @@ const AboutUs = () => {
                 <Row>
                     <Col className='mb-3 d-flex justify-content-center'>
                         <Card style={{ width: '18rem', border: 'none', height: '313px' }}>
-                            <img src={mission} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
+                            <img src={mission} className='mr-auto ml-auto mb-1' height='60px' width='60px' alt='mission icon'/>
                             <Card.Body className='card-body-about-us'>
                                 <Card.Title className='text-white'>Our Mission</Card.Title>
                                 <Card.Text className='text-justify text-white'>
@@ -31,7 +31,7 @@ const AboutUs = () => {
                     </Col>
                     <Col className='mb-3 d-flex justify-content-center'>
                         <Card style={{ width: '18rem', border: 'none', height: '350px' }}>
-                            <img src={premium} className='mr-auto ml-auto mb-1' height='60px' width='60px'/>
+                            <img src={premium} className='mr-auto ml-auto mb-1' height='60px' width='60px' alt='premium icon'/>
                             <Card.Body className='card-body-about-us'>
                                 <Card.Title className='text-white'>Go Premium</Card.Title>
                                 <Card.Text className='text-justify text-white'>
@@ -46,7 +46,7 @@ const AboutUs = () => {
             <Container>
                 <h2 className='title mb-4 pl-4'>Vegan Testimonial</h2>
                 <hr/>
-                <img src={quotation} height='30px' width='30px'/>
+                <img src={quotation} height='30px' width='30px' alt='quotation marks'/>
                 <p className='text-justify'>
                 (Daniel’s girlfriend testimonial) ... Saying the difficulties and bad experiences she found when turning vegan and what she thinks about Veganbite App. ....
                 (Her name, 2020)

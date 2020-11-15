@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
 
-class BFCard extends React.Component {
+class LCard extends React.Component {
     render() {
         const { name, pic, calories, recipe } = this.props;
         return (
@@ -15,7 +15,7 @@ class BFCard extends React.Component {
                         <Card.Title
                         className='text-warning text-center'
                         style={{ border: '1px solid #F69740' }}
-                        >BREAKFAST</Card.Title>
+                        >LUNCH</Card.Title>
                         <Card.Text className='text-center mt-5'>
                         <h5>{name}</h5>
                         </Card.Text>
@@ -31,4 +31,4 @@ class BFCard extends React.Component {
     }
 }
 
-export default BFCard;
+export default LCard;

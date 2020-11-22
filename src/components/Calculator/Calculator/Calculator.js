@@ -1,10 +1,11 @@
 import React from "react";
 import InputCard from "../InputCards/InputCard";
-import GenderCard from '../GenderCard';
+import GenderCard from '../Gender/GenderCard';
 import GoalsCard from "../GoalsCard/GoalsCard";
-import PhysicalAct from '../PhysicalAct';
+import PhysicalAct from '../Physical/PhysicalAct';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import './Calculator.css';
 
 class Calculator extends React.Component {
   state = {
@@ -120,6 +121,7 @@ class Calculator extends React.Component {
   }
   render() {
     return (
+      <div className='calc'>
       <Container>
         <Row>
           <Col className='mb-3 d-flex justify-content-center'>
@@ -127,7 +129,7 @@ class Calculator extends React.Component {
               title="What is your gender?"
               handleChangeGender={this.handleChange}
               currentGenderSelected={this.state.gender}
-            />
+              />
           </Col>
           <Col className='mb-3 d-flex justify-content-center'>
             <InputCard
@@ -147,7 +149,7 @@ class Calculator extends React.Component {
                 unit='cm'
                 currentValue={this.state.height}
                 handleChange={this.handleChange}
-              />
+                />
             </Col>
             <Col className='mb-3 d-flex justify-content-center'>
               <InputCard
@@ -164,7 +166,7 @@ class Calculator extends React.Component {
               <PhysicalAct
                 title='What is your daily activity level?'
                 name='physicalActivity'
-                currentValue={this.state.physicalActivity}
+                currentPactivitySelected={this.state.physicalActivity}
                 handleActivityLevel={this.handleChange} 
                 />
             </Col>
@@ -174,12 +176,12 @@ class Calculator extends React.Component {
               <GoalsCard
                 title="What is your goal?"
                 name='goals'
-                currentValue={this.state.goals}
                 handleGoals={this.handleChange}
+                currentGoalSelected={this.state.goals}
                 // loseWeight={this.loseWeight}
                 // maintainWeight={this.maintainWeight}
                 // gainWeight={this.gainWeight}
-              />
+                />
             </Col>
           </Row>
           <Row>
@@ -206,8 +208,10 @@ class Calculator extends React.Component {
             </button>
           </Row>
       </Container>
+      </div>
     );
   }
 }
 
 export default Calculator;
+// export const CALORIC_GOAL = this.state.caloricIntake;

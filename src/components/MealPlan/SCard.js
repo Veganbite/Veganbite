@@ -1,21 +1,22 @@
 import React from 'react';
-import { Card, Row, Col, Button } from 'react-bootstrap';
+import { Container, Card, Row, Col, Button } from 'react-bootstrap';
 
-class MealCard extends React.Component {
+class SCard extends React.Component {
     render() {
         const { label, image, calories, recipe } = this.props;
         return (
+            <Container>
             <Row>
                 <Col className='d-flex justify-content-center'>
-                    <img src={image} width='250px' height='250px' alt={label}/>
+                    <img src={image} width='275px' height='275px' alt={label}/>
                 </Col>
-                <Col>
-                    <Card className='d-flex justify-content-center' style={{ width: '320px', border: 'none', height: '250px' }}>
+                <Col className='d-flex justify-content-center'>
+                    <Card className='d-flex justify-content-center' style={{ width: '320px', border: 'none', height: '275px' }}>
                         <Card.Body>
                         <Card.Title
                         className='text-warning text-center'
                         style={{ border: '1px solid #F69740' }}
-                        >DINNER</Card.Title>
+                        >SNACK</Card.Title>
                         <Card.Text className='text-center mt-5'>
                         <h5>{label}</h5>
                         </Card.Text>
@@ -27,8 +28,9 @@ class MealCard extends React.Component {
                     </Card>
                 </Col>
             </Row>
+            </Container>
         )
     }
 }
 
-export default MealCard;
+export default SCard;

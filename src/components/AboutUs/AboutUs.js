@@ -8,7 +8,7 @@ import './AboutUs.css';
 const AboutUs = () => {
     return (
         <div>
-            <Jumbotron fluid className='bg-white'>
+            <Jumbotron fluid className='bg-white about'>
                 <Container>
                     <h1 className='title mb-4 pl-4'>About us</h1>
                     <p className='text-justify'>

@@ -1,4 +1,6 @@
 import React from "react";
+import male from '../../../assets/male.png';
+import female from '../../../assets/female.png';
 import { Card, Button, Col } from 'react-bootstrap';
 
 function GenderCard (props) {
@@ -10,22 +12,22 @@ function GenderCard (props) {
                     </Card.Title>
                     <Col className='d-flex justify-content-center'>
                         <Button
-                            style={{ marginRight: '20px', marginTop: '25px' }}
-                            variant='light' 
+                            style={{ marginRight: '20px', marginTop: '25px'}}
+                            variant='outline-warning'
                             name="gender" 
-                            value="male" 
-                            onClick={props.handleChangeGender} 
-                            className={props.currentGenderSelected === "male" ? 'active' : null} >
-                                Male
+                            value="male"
+                            onClick={props.handleChangeGender}  
+                            className={props.currentGenderSelected === "male" ? 'active' : null}>
+                            <img src={male} alt='male' heigt='50px' width='50px' onClick={props.handleChangeGender}/>
                         </Button>
                         <Button
                             style={{ marginLeft: '20px', marginTop: '25px' }}
-                            variant='light' 
+                            variant='outline-warning'
                             name="gender" 
                             value="female" 
                             onClick={props.handleChangeGender} 
                             className={props.currentGenderSelected === "female" ? 'active' : null}>
-                                Female
+                            <img src={female} atl='female' height='50px' width='50px' onClick={props.handleChangeGender}/>
                         </Button>
                     </Col>
                 </Card.Body>

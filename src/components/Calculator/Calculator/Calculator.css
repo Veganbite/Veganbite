@@ -1,16 +1,4 @@
-.about {
+.calc {
     background-image: url(https://lh3.googleusercontent.com/proxy/9IlXUOJguDS2ykKwWbMzft-lxgKbTbyYd2dc0m_bFJd-wf8lXeTzLfunkfck1Car5DH-pDo4VwWfgdiGEynuaTyV5d9UVC6UBo--JUrXOhmQCHmMXfCKA6MU4UHHtIKQIUhTukn-tcea5_XotA);
-}
-
-.title {
-    color: #F69740;
-}
-
-.card-body-about-us {
-    height: 1px;
-    background: #F69740;
-}
-
-hr {
-    background: #F69740;
+    padding-bottom: 10px;
 }

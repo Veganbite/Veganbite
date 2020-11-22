@@ -12,40 +12,40 @@ function PhysicalAct (props) {
                     <Col className='d-flex flex-column'>
                         <Button
                             style={{ marginTop: '8px' }}
-                            variant="light" 
+                            variant="outline-warning" 
                             onClick={props.handleActivityLevel}
                             name="physicalActivity"
                             value="sedentary"
-                            >
+                            className={props.currentPactivitySelected === "sedentary" ? 'active' : null}>
                             Sedentary
                         </Button>
                         <Button
                             style={{ marginTop: '15px' }}
-                            variant="light" 
+                            variant="outline-warning" 
                             onClick={props.handleActivityLevel}
                             name="physicalActivity"
                             value="moderate"
-                        >
+                            className={props.currentPactivitySelected === "moderate" ? 'active' : null}>
                             Moderate
                         </Button>
                     </Col>
                     <Col className='d-flex flex-column'>
                         <Button
                             style={{ marginTop: '8px' }}
-                            variant="light"
+                            variant="outline-warning"
                             onClick={props.handleActivityLevel}
                             name="physicalActivity"
                             value="light"
-                            >
+                            className={props.currentPactivitySelected === "light" ? 'active' : null}>
                             Light
                         </Button>
                         <Button
                             style={{ marginTop: '15px' }}
-                            variant="light" 
+                            variant="outline-warning" 
                             onClick={props.handleActivityLevel}
                             name="physicalActivity"
                             value="vigorous"
-                            >
+                            className={props.currentPactivitySelected === "vigorous" ? 'active' : null}>
                             Vigorous
                         </Button>
                     </Col>

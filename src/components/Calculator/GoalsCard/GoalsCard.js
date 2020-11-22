@@ -11,29 +11,32 @@ function GoalsCard (props) {
                     <Col className='d-flex justify-content-center'>
                         <Button
                             style={{marginTop: '25px' }}
-                            variant="light"
+                            variant='outline-warning'
                             onClick={props.handleGoals}
                             name='goals'
                             value='lose'
-                            className={props.currentGenderSelected === "lose" ? 'active' : null}>
+                            className={props.currentGoalSelected === 'lose' ? 'active' : null }
+                            >
                             Lose Weight
                         </Button>
                         <Button
                             style={{marginRight: '20px', marginLeft: '20px' ,marginTop: '25px' }}
-                            variant="light"
+                            variant="outline-warning"
                             onClick={props.handleGoals}
                             name='goals'
                             value='maintain'
-                            className={props.currentGenderSelected === "maintain" ? 'active' : null}>
+                            className={props.currentGoalSelected === 'maintain' ? 'active' : null }
+                            >
                             Maintain
                         </Button>
                         <Button
                             style={{ marginTop: '25px' }}
-                            variant="light"
+                            variant="outline-warning"
                             onClick={props.handleGoals}
                             name='goals'
                             value='gain'
-                            className={props.currentGenderSelected === "gain" ? 'active' : null}>
+                            className={props.currentGoalSelected === 'gain' ? 'active' : null }
+                            >
                             Gain Weight
                         </Button>
                     </Col>

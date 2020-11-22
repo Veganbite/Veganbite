@@ -1,0 +1,123 @@
+.wrapper {
+  float: left;
+  width: 33%;
+}
+
+.wrapper .cards-info {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  margin-top: 100px;
+}
+
+.cards-image {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 15px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.cards-image:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.cards-description {
+  font-size: px;
+  font-weight: lighter;
+  margin-top:30px;
+}
+
+/* .cards-button {
+    width: 50px;
+    height: 50px;
+    padding-left: 5em;
+  } */
+.buttonInes {
+  display: inline-block;
+  background-color: #f69740;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.buttonInes span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonInes span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonInes:hover span {
+  padding-right: 50px;
+}
+
+.buttonInes:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonInes a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.buttonInes a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  /* border-bottom: 8px solid white; */
+}
+
+@media only screen and (max-width: 950px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .cards-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .cards-description {
+    font-size: 30px;
+  }
+  .buttonInes a {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-title {
+    font-size: 30px;
+  }
+  .cards-description {
+    font-size: 20px;
+  }
+}

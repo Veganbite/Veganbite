@@ -3,9 +3,9 @@ import InputCard from "../InputCards/InputCard";
 import GenderCard from '../Gender/GenderCard';
 import GoalsCard from "../GoalsCard/GoalsCard";
 import PhysicalAct from '../Physical/PhysicalAct';
+import unnamed from '../../../assets/unnamed.png';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import './Calculator.css';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 class Calculator extends React.Component {
   state = {
@@ -121,7 +121,7 @@ class Calculator extends React.Component {
   }
   render() {
     return (
-      <div className='calc'>
+      <div style={{ backgroundImage: `url(${unnamed})`, paddingBottom: '10px'}}>
       <Container>
         <Row>
           <Col className='mb-3 d-flex justify-content-center'>
@@ -196,16 +196,21 @@ class Calculator extends React.Component {
             </Col>
           </Row>
           <Row className='d-flex justify-content-center mb-4'>
-            <button style={{ border: 'none',
-              padding: '17px',
-              backgroundColor: '#F69740',
-              borderRadius: '50%' }}>
+            <Button 
+              variant='warning'
+              className='text-center'
+              style={{
+              borderRadius: '50%',
+              paddingLeft: '28px',
+              paddingRight: '30px',
+              paddingTop: '25px',
+              paddingBottom: '18px' }}>
             <Link style={{ textDecoration: 'none',
               color: 'white' }}
               className='link' to="/meal-plan">
-              Meal<br/>Plan
+              <h4>Meal<br/>Plan</h4>
             </Link>
-            </button>
+            </Button>
           </Row>
       </Container>
       </div>

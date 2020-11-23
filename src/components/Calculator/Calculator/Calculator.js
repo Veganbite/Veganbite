@@ -189,7 +189,7 @@ class Calculator extends React.Component {
               <Card border='warning' className='mb-4' style={{ width: '28rem', height: '6rem' }}>
                 <Card.Body className='d-flex justify-content-center align-items-center'>
                   <Card.Title className='text-center'>
-                    Your Caloric Intake: <u>{this.state.caloricIntake}</u>
+                    Your Caloric Intake (kcal): <u>{this.state.caloricIntake}</u>
                   </Card.Title>
                 </Card.Body>
               </Card>

@@ -3,12 +3,13 @@ import { Jumbotron, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import mission from '../../assets/mission.png';
 import premium from '../../assets/premium.png';
 import quotation from '../../assets/quotation.png';
+import unnamed from '../../assets/unnamed.png';
 import './AboutUs.css';
 
 const AboutUs = () => {
     return (
         <div>
-            <Jumbotron fluid className='bg-white about'>
+            <Jumbotron fluid style={{ backgroundImage: `url(${unnamed})` }}>
                 <Container>
                     <h1 className='title mb-4 pl-4'>About us</h1>
                     <p className='text-justify'>

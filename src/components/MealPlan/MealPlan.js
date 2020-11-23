@@ -2,10 +2,12 @@ import React from "react";
 import BFCard from "./BFCard";
 import LCard from './LCard';
 import DCard from './DCard';
-import './MealPlan.css';
 import SCard from './SCard';
+import shuffle from '../HomePage/HowItWorks/shuffle.png';
+import unnamed from '../../assets/unnamed.png';
 // import { CALORIC_GOAL } from '../Calculator/Calculator/Calculator';
 import axios from 'axios';
+import { Row } from 'react-bootstrap';
 
 const YOUR_APP_ID = '60645151';
 const YOUR_APP_KEY = '755275472391afd460251ecf421222b1';
@@ -45,7 +47,8 @@ class MealPlan extends React.Component {
             image: '',
             url: '',
             calories: ''
-        }]
+        }],
+        // isButtonDisabled: false
     }
 
     componentDidMount() {
@@ -83,13 +86,37 @@ class MealPlan extends React.Component {
          .then((response) => this.setState({dinner: [response.data.hits[this.randomNumberGenerator()].recipe]}))
     }
 
+    // shuffleListener = (event) => {
+    //     event.preventDefault();
+    //     this.setState({ isButtonDisabled: true });
+    //     setTimeout(() => this.setState({ isButtonDisabled: false }), 20000);
+    // }
+
     render() {
         return(
-           <div className='mp'>
+           <div style={{ backgroundImage: `url(${unnamed})`, paddingBottom: '10px', paddingTop: '10px' }}>
                 {this.state.breakfast.map((meal, index) => <BFCard key={index} label={meal.label} image={meal.image} calories={meal.calories / meal.yield} recipe={meal.url} />)}
                 {this.state.lunch.map((meal, index) => <LCard key={index} label={meal.label} image={meal.image} calories={meal.calories / meal.yield} recipe={meal.url} />)}
                 {this.state.dinner.map((meal, index) => <DCard key={index} label={meal.label} image={meal.image} calories={meal.calories / meal.yield} recipe={meal.url} />)}
                 {this.state.snack.map((meal, index) => <SCard key={index} label={meal.label} image={meal.image} calories={meal.calories / meal.yield} recipe={meal.url} />)}
+                <Row className='d-flex justify-content-center mb-4'>
+                    <button
+                        title='Go Premium to unlock the Shuffle Functionality'
+                        className='shuffle-button'
+                        // onClick={this.shuffleListener}
+                        // disabled={this.state.isButtonDisabled}
+                        onClick={() => alert('To shuffle your Meal Plan you need Premium Veganbite. Check out our About Us page for more information.')}
+                        style={{ border: 'none', backgroundColor: 'transparent' }}>
+                    <li style={{ listStyle: 'none', textDecoration: 'none',
+                    color: 'orange' }}>
+                        <span style={{ textDecoration: 'none', color: 'orange', fontSize: '20px' }}>
+                        <img src={shuffle} alt='shuffle-icon' height='75px' width='75px'/>
+                        <br />
+                        Shuffle
+                        </span>
+                    </li>
+                    </button>
+                </Row>
            </div>
         )
     }

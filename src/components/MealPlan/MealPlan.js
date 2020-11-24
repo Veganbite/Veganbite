@@ -5,21 +5,11 @@ import DCard from "./DCard";
 import SCard from "./SCard";
 import shuffle from "../HomePage/HowItWorks/shuffle.png";
 import unnamed from "../../assets/unnamed.png";
-// import { CALORIC_GOAL } from '../Calculator/Calculator/Calculator';
 import axios from "axios";
 import { Row } from "react-bootstrap";
 
 const YOUR_APP_ID = "60645151";
 const YOUR_APP_KEY = "755275472391afd460251ecf421222b1";
-
-let minRangeBreakfast = 0; //Number(CALORIC_GOAL) * 0.2 - 250;
-let maxRangeBreakfast = 400; //Number(CALORIC_GOAL) * 0.2 + 250;
-let minRangeLunch = 400; //Number(CALORIC_GOAL) * 0.5 - 250;
-let maxRangeLunch = 900; //Number(CALORIC_GOAL) * 0.5 + 250;
-let minRangeDinner = 400; //Number(CALORIC_GOAL) * 0.5 - 250;
-let maxRangeDinner = 900; //Number(CALORIC_GOAL) * 0.5 + 250;
-let minRangeSnack = 100; //Number(CALORIC_GOAL) * 0.2 - 250;
-let maxRangeSnack = 300; //Number(CALORIC_GOAL) * 0.2 + 250;
 
 class MealPlan extends React.Component {
   state = {
@@ -66,7 +56,15 @@ class MealPlan extends React.Component {
         ? this.props.location.state.CALORIC_INTAKE
         : "Calories not set yet"
     );
-    console.log(CALORIC_GOAL);
+    let minRangeBreakfast = 0;
+    let maxRangeBreakfast = CALORIC_GOAL * 0.50;
+    let minRangeLunch = CALORIC_GOAL * 0.15;
+    let maxRangeLunch = CALORIC_GOAL * 0.70;
+    let minRangeDinner = CALORIC_GOAL * 0.15;
+    let maxRangeDinner = CALORIC_GOAL * 0.70;
+    let minRangeSnack = 0;
+    let maxRangeSnack = CALORIC_GOAL * 0.50;
+    // console.log(CALORIC_GOAL);
     this.getMealData("breakfast", minRangeBreakfast, maxRangeBreakfast);
     this.getMealData("lunch", minRangeLunch, maxRangeLunch);
     this.getMealData("dinner", minRangeDinner, maxRangeDinner);
@@ -84,7 +82,7 @@ class MealPlan extends React.Component {
       )
       .then((response) =>
         this.setState({
-          [mealType]: [response.data.hits[this.randomNumberGenerator()].recipe],
+          [mealType]: [response.data.hits[this.randomNumberGenerator()].recipe]
         })
       );
   };

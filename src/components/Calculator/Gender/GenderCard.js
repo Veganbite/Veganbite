@@ -18,36 +18,39 @@ function GenderCard(props) {
               marginBottom: "20px",
               marginRight: "20px",
               borderRadius: "50%",
-              height: "70px",
-              backgroundImage: `url${male}`,
-              backgroundSize: "cover",
-              
+              height: "67px",
+              width: '67px',
+              backgroundImage: `url(${male})`,
+              backgroundSize: "50px 50px",
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
             }}
             onClick={props.handleChangeGender}
             name="gender"
             value="male"
             className={
-              props.currentGenderSelected === "male" ? "active" : "disabled"
-            }
-          >
-            {/* <img src={male} alt="male" heigt="50px" width="50px" /> */}
+              props.currentGenderSelected === "male" ? "gender-active" : "disabled"
+            }>
           </button>
           <button
             style={{
               marginTop: "20px",
-              marginLeft: "20px",
               marginBottom: "20px",
+              marginLeft: "20px",
               borderRadius: "50%",
-              height: "70px",
+              height: "67px",
+              width: '67px',
+              backgroundImage: `url(${female})`,
+              backgroundSize: "50px 50px",
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
             }}
             onClick={props.handleChangeGender}
             name="gender"
             value="female"
             className={
-              props.currentGenderSelected === "female" ? "active" : "disabled"
-            }
-          >
-            <img src={female} atl="female" height="50px" width="50px" />
+              props.currentGenderSelected === "female" ? "gender-active" : "disabled"
+            }>
           </button>
         </Col>
       </Card.Body>

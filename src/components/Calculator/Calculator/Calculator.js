@@ -4,7 +4,6 @@ import GenderCard from "../Gender/GenderCard";
 import GoalsCard from "../GoalsCard/GoalsCard";
 import PhysicalAct from "../Physical/PhysicalAct";
 import unnamed from "../../../assets/unnamed.png";
-import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 class Calculator extends React.Component {
@@ -226,26 +225,21 @@ class Calculator extends React.Component {
                 paddingRight: "30px",
                 paddingTop: "25px",
                 paddingBottom: "18px",
+                textDecoration: "none",
+                color: "white"
               }}
-            >
-              <button
-                style={{ textDecoration: "none", color: "white" }}
-                className="link"
-                onClick={() =>
-                  this.props.history.push({
-                    pathname: "/meal-plan",
-                    state: {
-                      CALORIC_INTAKE: this.state.caloricIntake,
-                    },
-                  })
-                }
-              >
+              onClick={() =>
+                this.props.history.push({
+                  pathname: "/meal-plan",
+                  state: {
+                    CALORIC_INTAKE: this.state.caloricIntake,
+                  },
+                })}>
                 <h4>
                   Meal
                   <br />
                   Plan
                 </h4>
-              </button>
             </Button>
           </Row>
         </Container>
@@ -255,4 +249,3 @@ class Calculator extends React.Component {
 }
 
 export default Calculator;
-// export const CALORIC_GOAL = this.state.caloricIntake;

@@ -1,0 +1,8 @@
+.active {
+  border: 3px solid orange !important;
+  border-radius: 50% !important;
+}
+
+.disabled {
+  border: none;
+}

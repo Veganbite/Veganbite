@@ -13,7 +13,7 @@ function HowItWorksCards() {
         /* addButton={add} */
       />
       <HowItWorks
-        description="Vegan Meal Plan for the day 
+        description="Vegan Meal Plan for the day
         (Breakfast, Lunch & Dinner)"
         cardImage={vegetarian}
         /* addButton={add} */

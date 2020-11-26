@@ -6,16 +6,22 @@ const Header = () => {
     <div>
       <div className="img-container">
         <div className="inner-container">
-          <h1 className='header-title'>VEGAN DOESN'T MEAN BORING!</h1>
+          <h1 className="header-title">
+            VEGAN <br />
+            DOESN'T
+            <br /> MEAN
+            <br /> BORING!
+          </h1>
         </div>
       </div>
 
       <div className="message">
-        <p>
+        <h3 className="message-h3">
           Say no to blend and tasteless food, we are here to help you with meal
           plans suitable for your goals.
-        </p>
-        <h3>100% cruelty-free!</h3>
+        </h3>{" "}
+        <br />
+        <h4>100% cruelty-free!</h4>
       </div>
       <div>
         <h2 className="how-it-works-title">How it Works?</h2>

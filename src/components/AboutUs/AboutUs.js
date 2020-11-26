@@ -49,9 +49,16 @@ const AboutUs = () => {
                 <hr/>
                 <img src={quotation} height='30px' width='30px' alt='quotation marks'/>
                 <p className='text-justify'>
-                (Daniel’s girlfriend testimonial) ... Saying the difficulties and bad experiences she found when turning vegan and what she thinks about Veganbite App. ....
-                (Her name, 2020)
+                I’ve been vegan for seven years, but the first two years were a disaster. I had no
+                idea what I was doing, what to buy, what to eat, or even how to eat it. It wasn’t
+                until my body started to show visible signs of weight loss, fatigue and a weakened
+                immune system that I truly learned how to be a vegan. Now I regularly take my
+                vitamins: B12 first and foremost, iron and Iodine (region specific). I try to eat
+                the colour of the rainbow, literally, with dark and light greens, yellows, purples,
+                reds, oranges, etc. I workout regularly and drink 3L of water daily. I now feel
+                fantastic and no longer suffer from any of my earlier symptoms.
                 </p>
+                <p><em>Erin Goldman 2020</em></p>
                 <hr/>
             </Container>
             <Container>

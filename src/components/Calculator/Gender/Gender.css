@@ -1,0 +1,9 @@
+.gender-active {
+  border: 5px solid #F69740 !important;
+  border-radius: 50% !important;
+  scale: 1.1;
+}
+
+.disabled {
+  border: none;
+}

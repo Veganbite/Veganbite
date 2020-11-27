@@ -7,7 +7,7 @@ import BootNavBar from "./components/Navbar/BootNavBar";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import 'bootstrap/dist/js/bootstrap.js';
+import "bootstrap/dist/js/bootstrap.js";
 
 ReactDOM.render(
   <React.StrictMode>

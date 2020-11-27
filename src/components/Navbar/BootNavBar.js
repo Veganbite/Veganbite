@@ -8,10 +8,10 @@ const BootNavBar = () => {
         <div>
             <nav class="navbar navbar-expand-sm navbar-dark">
             <Link to="/" class="navbar-brand mr-0"><img src={logo} alt='logo' height='50px'/></Link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <Link to="/calculator" class="nav-link text-white">Calculator</Link>

@@ -58,7 +58,7 @@ const AboutUs = () => {
                 reds, oranges, etc. I workout regularly and drink 3L of water daily. I now feel
                 fantastic and no longer suffer from any of my earlier symptoms.
                 </p>
-                <p><em>Erin Goldman 2020</em></p>
+                <p><em>Erin Mcintosh, 2020</em></p>
                 <hr/>
             </Container>
             <Container>

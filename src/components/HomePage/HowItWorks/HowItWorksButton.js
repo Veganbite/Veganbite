@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HowItWorksButton = () => {
   return (
@@ -6,7 +7,7 @@ const HowItWorksButton = () => {
       <div className="btnInes">
         <button className="buttonInes">
           <span>
-            <a href="/calculator">Let's Start!</a>
+            <Link to="/calculator"> Let's Start! </Link>
           </span>
         </button>
       </div>

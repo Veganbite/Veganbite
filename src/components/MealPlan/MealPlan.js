@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// import React from 'react';
-// import MealCard from "./MealCard"
-=======
 import React from "react";
 import BFCard from "./BFCard";
 import LCard from "./LCard";
@@ -11,7 +7,6 @@ import shuffle from "../HomePage/HowItWorks/shuffle.png";
 import unnamed from "../../assets/unnamed.png";
 import axios from "axios";
 import { Row } from "react-bootstrap";
->>>>>>> 065038fb19c3fb67b145861592cc29d626917a85
 
 const YOUR_APP_ID = "60645151";
 const YOUR_APP_KEY = "755275472391afd460251ecf421222b1";

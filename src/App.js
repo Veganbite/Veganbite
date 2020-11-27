@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutUs from './components/AboutUs/AboutUs';
-import Calculator from './components/Calculator/Calculator';
+import Calculator from './components/Calculator/Calculator/Calculator';
 import HomePage from './components/HomePage/HomePage';
 import MealPlan from './components/MealPlan/MealPlan';
 import './App.css';
